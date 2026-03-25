@@ -1,0 +1,7 @@
+# Copyright Rob Gage 2026
+
+# build
+target/
+
+# IDE
+.idea/
