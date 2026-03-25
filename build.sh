@@ -9,8 +9,8 @@ BUILD_DIR="$SCRIPT_DIR/target"
 OUTPUT="$BUILD_DIR/c1+rt"
 
 mkdir -p "$BUILD_DIR"
-mapfile -t SOURCE_FILES < <(find "$RUNTIME_DIR" -name "*.c")
+mapfile -t SOURCE_FILES < <(find "$RUNTIME_DIR/src" -name "*.c")
 cc -std=c11 -O2 -Wall -Wextra \
-   -I"$RUNTIME_DIR" \
+   -I"$RUNTIME_DIR/include" \
    "${SOURCE_FILES[@]}" \
    -o "$OUTPUT"
