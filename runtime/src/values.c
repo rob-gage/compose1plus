@@ -5,8 +5,6 @@
 
 #include "values.h"
 
-struct value_t { uint64_t _; };
-
 struct value_buffer_t {
     size_t length;
     size_t capacity;
@@ -16,7 +14,7 @@ struct value_buffer_t {
 struct value_pointer_t { uintptr_t _; };
 
 value_tag_t value_tag(value_t value) {
-    return (value_tag_t) value._ & 7;
+    return (value_tag_t) value & 7;
 }
 
 /*

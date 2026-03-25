@@ -3,9 +3,11 @@
 #ifndef VALUES_H
 #define VALUES_H
 
+#include <stdint.h>
+
 #include "booleans.h"
 
-typedef struct value_t value_t;
+typedef uint64_t value_t;
 
 typedef struct value_buffer_t value_buffer_t;
 

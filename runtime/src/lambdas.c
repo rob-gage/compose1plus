@@ -5,5 +5,4 @@
 
 struct lambda_t {
     size_t size;
-    instructions uint32_t[];
 };
