@@ -21,12 +21,37 @@ typedef enum {
 
 value_tag_t value_tag(value_t value);
 
-/*
-_Bool value_as_boolean(value_t value) {
-    uint64_t boolean = value._ >> 3;
-    if (boolean == 0) { return true; } else { return false; }
-}
+#define VALUE_FROM_INTEGER(tag, integer) \
+    ((value_t)( \
+        (((uint64_t)(int64_t)(integer)) << 3) | \
+        ((uint64_t)(tag) & 0x7) \
+    ))
 
-value_t value_from_boolean(_Bool boolean);
-*/
+#define VALUE_FROM_POINTER(tag, pointer) \
+    ((value_t)( \
+        (((uintptr_t)(pointer)) & ~(uintptr_t)0x7) | \
+        ((uintptr_t)(tag) & 0x7) \
+    ))
+
+#define VALUE_TO_INTEGER(value) \
+    ((int64_t)((value) >> 3))
+
+#define VALUE_TO_POINTER(value) \
+    ((void*)(((uintptr_t)(value)) & ~(uintptr_t)0x7))
+
+_Static_assert(
+    sizeof(uintptr_t) == 8 || sizeof(uintptr_t) == 4,
+    "System must use standard 32-bit or 64-bit pointers."
+);
+
+_Static_assert(
+    ((int64_t)-1 >> (int64_t)1) == (int64_t)-1,
+    "Right shift must preserve sign for `int64_t`."
+);
+
+_Static_assert(
+    ((int64_t)-1 & (int64_t)1) == (int64_t)1,
+    "`int64_t` must use two's complement representation."
+);
+
 #endif
