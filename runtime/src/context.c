@@ -8,6 +8,7 @@
 #define INLINE_VALUE_BUFFER_SIZE 1024
 
 struct context_t {
+    // data stack
     value_t inline_stack[INLINE_VALUE_BUFFER_SIZE];
     value_t* stack;
     size_t stack_size;
@@ -25,7 +26,7 @@ context_t create_context() {
 /*
 
 value_t pop_value(context_t* context) {
-    // TODO
+    if context->stack_size == 0
 }
 
 void push_value(context_t* context, value_t value) {
