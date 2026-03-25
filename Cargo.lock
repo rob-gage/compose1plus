@@ -7,5 +7,9 @@ name = "cmpsc"
 version = "0.0.0"
 
 [[package]]
+name = "cmpstr"
+version = "0.1.0"
+
+[[package]]
 name = "core"
 version = "0.0.0"

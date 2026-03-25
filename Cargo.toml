@@ -1,5 +1,5 @@
 # Copyright Rob Gage 2026
 
 [workspace]
-members = ["cmpsc","core"]
+members = ["cmpsc", "cmpstr","core"]
 resolver = "2"
