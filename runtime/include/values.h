@@ -15,7 +15,8 @@ typedef struct value_pointer_t value_pointer_t;
 
 typedef enum {
     LAMBDA = 0,
-    BOOLEAN = 1,
+    ERROR = 1,
+    BOOLEAN = 2,
 } value_tag_t;
 
 value_tag_t value_tag(value_t value);
