@@ -9,4 +9,6 @@
 
 void k_copy(context_t *);
 
+void k_drop(context_t* context);
+
 #endif
