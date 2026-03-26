@@ -21,6 +21,12 @@ typedef enum {
 
 value_tag_t value_tag(value_t value);
 
+#define IS_LAMBDA(value) (value_tag((value)) == LAMBDA)
+
+#define IS_ERROR(value) (value_tag((value)) == ERROR)
+
+#define IS_BOOLEAN(value) (value_tag((value)) == BOOLEAN)
+
 #define VALUE_FROM_INTEGER(tag, integer) \
     ((value_t)( \
         (((uint64_t)(int64_t)(integer)) << 3) | \

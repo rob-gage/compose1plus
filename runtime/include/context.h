@@ -3,6 +3,8 @@
 #ifndef CONTEXT_H
 #define CONTEXT_H
 
+#include <stddef.h>
+
 #include "values.h"
 
 #define INLINE_VALUE_COUNT 1024
