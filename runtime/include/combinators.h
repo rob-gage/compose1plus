@@ -7,8 +7,10 @@
 
 // stack combinators
 
-void k_copy(context_t *);
+void k_copy(context_t*);
 
-void k_drop(context_t* context);
+void k_drop(context_t*);
+
+void k_hop(context_t*);
 
 #endif
