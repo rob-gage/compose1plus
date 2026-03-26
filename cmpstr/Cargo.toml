@@ -2,7 +2,7 @@
 
 [package]
 name = "cmpstr"
-version = "0.0.0"
+version = "0.0.1"
 repository = "https://github.com/rob-gage/compose1plus"
 authors = ["Rob Gage"]
 homepage = "https://composelanguage.org"
