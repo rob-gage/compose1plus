@@ -7,6 +7,10 @@
 
 typedef char boolean_t;
 
+#define FALSE ((boolean_t)0)
+
+#define TRUE ((boolean_t)1)
+
 #define BOOLEAN_FROM_VALUE(value) \
     ((boolean_t)(VALUE_TO_INTEGER(value) != 0))
 
