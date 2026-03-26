@@ -8,7 +8,6 @@ use clap::{
 /// A `cmpstr` command
 #[derive(Parser)]
 #[command(name = "cmpstr")]
-#[command(about = "Compose build tool and package manager", long_about = None)]
 pub struct Command {
     #[command(subcommand)]
     pub command: Subcommand,

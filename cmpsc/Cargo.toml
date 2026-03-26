@@ -3,6 +3,9 @@
 [package]
 name = "cmpsc"
 version = "0.0.0"
+repository = "https://github.com/rob-gage/compose1plus"
+authors = ["Rob Gage"]
+homepage = "https://composelanguage.org"
 edition = "2024"
 
 [dependencies]

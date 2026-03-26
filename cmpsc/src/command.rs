@@ -6,7 +6,6 @@ use std::path::PathBuf;
 /// A `cmpsc` command
 #[derive(Parser)]
 #[command(name = "cmpsc")]
-#[command(about = "Compose Compiler", long_about = None)]
 pub struct Command {
     /// Source files
     #[arg(required = true)]
