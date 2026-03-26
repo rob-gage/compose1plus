@@ -94,14 +94,14 @@ checksum = "c8d4a3bb8b1e0c1050499d1815f5ab16d04f0959b233085fb31653fbfc9d98f9"
 
 [[package]]
 name = "cmpsc"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "clap",
 ]
 
 [[package]]
 name = "cmpstr"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "clap",
 ]

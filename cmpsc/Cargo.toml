@@ -3,10 +3,12 @@
 [package]
 name = "cmpsc"
 version = "0.0.1"
+description = "Compose Compiler"
 repository = "https://github.com/rob-gage/compose1plus"
 authors = ["Rob Gage"]
 homepage = "https://composelanguage.org"
 edition = "2024"
+license = "0BSD"
 
 [dependencies]
 clap = { version = "4.6.0", features = ["derive"] }
